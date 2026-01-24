@@ -4,16 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arpit Bavankule | Full Stack Developer</title>
+    <title>Arpit Bavankule | Full Stack Developer & AI Enthusiast</title>
     <meta name="description"
-        content="Portfolio of Arpit Bavankule - Final-Year BCA Student & Full-Stack Developer specializing in Python, Java, and Supabase">
+        content="Final-Year BCA Student & Full-Stack Developer specializing in Python, Java, Supabase, and AI/ML. Passionate about building scalable web applications and AI-driven solutions.">
+    <meta name="keywords"
+        content="Arpit Bavankule, Full Stack Developer, Python Developer, Java Developer, Supabase, AI ML, Web Development, BCA Student, Portfolio">
+    <meta name="author" content="Arpit Bavankule">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arpitbavankule.com/">
+    <meta property="og:title" content="Arpit Bavankule | Full Stack Developer & AI Enthusiast">
+    <meta property="og:description"
+        content="Final-Year BCA Student & Full-Stack Developer specializing in Python, Java, Supabase, and AI/ML. Building scalable web applications and AI-driven solutions.">
+    <meta property="og:image" content="https://arpitbavankule.com/assets/images/profile1.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://arpitbavankule.com/">
+    <meta property="twitter:title" content="Arpit Bavankule | Full Stack Developer & AI Enthusiast">
+    <meta property="twitter:description"
+        content="Final-Year BCA Student & Full-Stack Developer specializing in Python, Java, Supabase, and AI/ML.">
+    <meta property="twitter:image" content="https://arpitbavankule.com/assets/images/profile1.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon.png">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#050505">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Inter:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -24,37 +51,114 @@
 
 <body class="theme-dark">
 
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-wrapper">
+            <img src="assets/favicon.png" alt="AB" class="loader-logo">
+            <div class="loader-ring"></div>
+        </div>
+    </div>
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#hero" class="skip-to-content">Skip to main content</a>
+
     <div id="cursor-dot"></div>
     <div id="cursor-outline"></div>
 
     <nav class="glass-nav">
-        <div class="logo">ARPIT<span class="highlight"> BAVANKULE</span></div>
+        <div class="logo">
+            <img src="assets/favicon.png" alt="AB Logo" class="logo-icon">
+        </div>
         <ul class="nav-links">
-            <li><a href="#hero" class="active" data-text="HOME">HOME</a></li>
-            <li><a href="#about" data-text="KERNEL">KERNEL</a></li>
-            <li><a href="#education" data-text="LOGS">LOGS</a></li>
-            <li><a href="#experience" data-text="EXPERIENCE">EXPERIENCE</a></li>
-            <li><a href="#skills" data-text="STACK">STACK</a></li>
-            <li><a href="#projects" data-text="MODULES">MODULES</a></li>
-            <li><a href="#contact" data-text="SIGNAL">SIGNAL</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <button id="theme-toggle" aria-label="Toggle Theme"><i data-lucide="moon"></i></button>
+        <div class="nav-controls">
+            <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
 
     <main>
         <!-- Hero Section -->
         <section id="hero">
             <div class="hero-bg" id="hero-canvas"></div>
-            <div class="content-wrapper">
-                <div class="glitch-wrapper">
-                    <h1 class="glitch" data-text="ARCHITECTING">ARCHITECTING</h1>
-                    <h1 class="glitch sub" data-text="DIGITAL REALITIES">DIGITAL REALITIES</h1>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <!-- Status Badge -->
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Available for opportunities</span>
+                        </div>
+                        <p class="hero-greeting">Hello, I'm</p>
+                        <h1 class="hero-name gradient-text">Arpit Bavankule</h1>
+                        <div class="hero-roles">
+                            <p class="hero-subtitle">I'm a <span class="typewriter" id="typewriter"></span></p>
+                        </div>
+                        <p class="hero-description">
+                            Final-Year BCA Student & Full-Stack Developer specializing in Python, Java, and Supabase.
+                            Passionate about building scalable web applications and AI-driven solutions.
+                        </p>
+                        <div class="cta-group">
+                            <a href="#projects" class="btn primary">View Projects</a>
+                            <a href="#contact" class="btn secondary">Get In Touch</a>
+                            <a href="Arpit Bavankule Resume.pdf" download class="btn secondary"
+                                aria-label="Download Resume">
+                                <i data-lucide="download"></i> Resume
+                            </a>
+                        </div>
+                        <div class="hero-socials">
+                            <a href="https://github.com/ArpitBavankule1" target="_blank" aria-label="GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/arpitbavankule03" target="_blank" aria-label="LinkedIn">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="mailto:arpitbavankule03@gmail.com" aria-label="Email">
+                                <i data-lucide="mail"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <p class="hero-subtitle">Full-Stack Developer <span class="separator">//</span> AI Enthusiast <span
-                        class="separator">//</span> BCA Student</p>
-                <div class="cta-group">
-                    <a href="#projects" class="btn primary">View Modules</a>
-                    <a href="#contact" class="btn secondary">Init Signal</a>
+                <div class="hero-visual">
+                    <div class="profile-circle-wrapper">
+                        <div class="rotating-ring ring-1"></div>
+                        <div class="rotating-ring ring-2"></div>
+                        <div class="profile-circle">
+                            <img src="assets/images/profile1.jpeg" alt="Arpit Bavankule" class="hero-profile-img">
+                        </div>
+                        <!-- Floating Tech Badges -->
+                        <div class="tech-badge badge-1" data-tech="Python">
+                            <i data-lucide="code-2"></i>
+                        </div>
+                        <div class="tech-badge badge-2" data-tech="Java">
+                            <i data-lucide="coffee"></i>
+                        </div>
+                        <div class="tech-badge badge-3" data-tech="React">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <div class="tech-badge badge-4" data-tech="Database">
+                            <i data-lucide="database"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="scroll-indicator">
@@ -63,159 +167,245 @@
             </div>
         </section>
 
-        <!-- About Section (The Kernel) -->
+        <!-- About Section -->
         <section id="about">
             <div class="section-header">
-                <h2><span class="hash">#</span> KERNEL_INFO</h2>
+                <h2><span class="hash">#</span> ABOUT_ME</h2>
                 <div class="line"></div>
             </div>
-            <div class="about-grid">
-                <div class="profile-card tilt-element">
-                    <div class="card-inner">
-                        <div class="profile-image-container">
-                            <img src="assets/images/profile1.jpeg" alt="Arpit Profile" class="profile-img">
+            <div class="about-container">
+                <div class="about-content">
+                    <h3 class="about-title">Hello! I'm Arpit Bavankule</h3>
+                    <p class="about-text">
+                        I'm a <strong>Final-Year BCA Student</strong> and <strong>Full-Stack Developer</strong> with a
+                        passion for building
+                        innovative web applications and AI-driven solutions. My expertise spans across <strong>Python,
+                            Java, JavaScript,
+                            and modern frameworks</strong> like React and Node.js.
+                    </p>
+                    <p class="about-text">
+                        I specialize in creating <strong>scalable backend systems</strong> using Supabase and
+                        PostgreSQL, while crafting
+                        intuitive user interfaces with Bootstrap and modern CSS. My recent work includes developing
+                        <strong>PlaceWise</strong>,
+                        an AI-powered placement platform that automates student-company matching and communication.
+                    </p>
+                    <p class="about-text">
+                        Beyond development, I'm deeply interested in <strong>AI/ML technologies</strong>, data analytics
+                        with Tableau and
+                        Power BI, and building systems that solve real-world problems. I'm constantly learning and
+                        exploring new technologies
+                        to enhance my skill set.
+                    </p>
+                    <p class="about-text">
+                        When I'm not coding, you'll find me exploring new tech trends, contributing to open-source
+                        projects, or working on
+                        personal projects that challenge my abilities and expand my knowledge.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i data-lucide="code-2"></i>
+                            <span>Full-Stack Development</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="brain"></i>
+                            <span>AI/ML Enthusiast</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="database"></i>
+                            <span>Database Architecture</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i data-lucide="rocket"></i>
+                            <span>Problem Solver</span>
                         </div>
                     </div>
                 </div>
-                <div class="terminal-window">
-                    <div class="terminal-header">
-                        <div class="buttons">
-                            <span class="close"></span>
-                            <span class="minimize"></span>
-                            <span class="maximize"></span>
-                        </div>
-                        <span class="title">user@arpit-dev:~/bio</span>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/profile1.jpeg" alt="Arpit Bavankule" class="about-profile-img">
+                        <div class="image-border"></div>
                     </div>
-                    <div class="terminal-body" id="terminal-content">
-                        <div class="command-line">
-                            <span class="prompt">➜</span> <span class="cmd">whoami</span>
-                        </div>
-                        <div class="output">
-                            <p>> Final-Year BCA student with proven Full-Stack development expertise.</p>
-                            <p>> Architected PlaceWise, an AI-driven platform automating placement processes.</p>
-                            <p>> Skilled in Python, Java, Supabase, and building scalable web applications.</p>
-                            <p>> Passionate about AI/ML, distributed systems, and creating impactful solutions.</p>
-                        </div>
-                        <div class="command-line">
-                            <span class="prompt">➜</span> <span class="cmd cursor-blink">_</span>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Statistics Counters -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="folder-check"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="5">0</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="10000">0</h3>
+                        <p class="stat-label">Records Processed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="3">0</h3>
+                        <p class="stat-label">Years of Learning</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section (System Logs) -->
-        <section id="education">
+        <!-- Background Section (Education + Experience Combined) -->
+        <section id="background">
             <div class="section-header">
-                <h2><span class="hash">#</span> EDUCATION_LOG</h2>
+                <h2><span class="hash">#</span> BACKGROUND</h2>
                 <div class="line"></div>
             </div>
-            <div class="timeline">
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023 - 2026</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Computer Applications</h3>
-                        <h4>BCA (Pursuing)</h4>
-                        <p class="institution">Degree College of Physical Education, H.V.P.M., Amravati</p>
-                        <ul class="log-details">
-                            <li>> Major: Full Stack Development</li>
-                            <li>> Focus: AI/ML, Web Technologies, Database Systems</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023</div>
-                    <div class="timeline-content">
-                        <h3>Higher Secondary Certificate</h3>
-                        <h4>HSC (12th)</h4>
-                        <p class="institution">Bhartiya Mahavidyalaya, Amravati</p>
-                        <ul class="log-details">
-                            <li>> Stream: Science</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Timeline Item 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021</div>
-                    <div class="timeline-content">
-                        <h3>Secondary School Certificate</h3>
-                        <h4>SSC (10th)</h4>
-                        <p class="institution">Shri Saibaba Vidyalaya, Amravati</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Work Experience Section -->
-        <section id="experience">
-            <div class="section-header">
-                <h2><span class="hash">#</span> WORK_EXPERIENCE</h2>
-                <div class="line"></div>
-            </div>
-            <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Feb 2025</div>
-                    <div class="timeline-content">
-                        <h3>Web Content Development Intern</h3>
-                        <h4>Dotcom Infotech Pvt. Ltd.</h4>
-                        <p class="institution">Amravati, India</p>
-                        <ul class="log-details">
-                            <li>> Completed 60-hour internship focused on Web Content Development</li>
-                            <li>> Worked on field project involving web technology implementation</li>
-                            <li>> Developed content strategy and implementation skills</li>
+            <div class="background-unified-grid">
+                <!-- Education Cards -->
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon education">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Bachelor of Computer Applications</h4>
+                            <p class="card-subtitle">BCA (Pursuing)</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Degree College of Physical Education, H.V.P.M., Amravati</p>
+                        <p class="card-duration">2023 - 2026</p>
+                        <ul class="card-details">
+                            <li>Major: Full Stack Development</li>
+                            <li>Focus: AI/ML, Web Technologies, Database Systems</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Dec 2024 - Mar 2025</div>
-                    <div class="timeline-content">
-                        <h3>Java Developer Intern</h3>
-                        <h4>JK Innovative Private Limited</h4>
-                        <p class="institution">Amravati, India</p>
-                        <ul class="log-details">
-                            <li>> Part of project development team working with Java</li>
-                            <li>> Developed FASTag Registration & Generator Portal for vehicles</li>
-                            <li>> Implemented toll automation and payment processing features</li>
+
+                <!-- Experience Cards -->
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon experience">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Full-Stack Developer Intern</h4>
+                            <p class="card-subtitle">Codec Technologies</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Remote</p>
+                        <p class="card-duration">Feb 2025 - Jul 2025</p>
+                        <ul class="card-details">
+                            <li>Developed JobTrackr, an AI-Based Job Recommendation Platform</li>
+                            <li>Integrated ML algorithms for skill-based job recommendations</li>
+                            <li>Built backend using Java (JSP/Servlets) and MySQL</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Mar 2025 - Apr 2025</div>
-                    <div class="timeline-content">
-                        <h3>Java Developer Intern</h3>
-                        <h4>3SV Software Solution</h4>
-                        <p class="institution">Remote</p>
-                        <ul class="log-details">
-                            <li>> Worked on ID Verification System for secure identity management</li>
-                            <li>> Implemented unique ID generation and validation processes</li>
-                            <li>> Focused on secure data handling and form validation</li>
+
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon experience">
+                            <i data-lucide="coffee"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Java Developer Intern</h4>
+                            <p class="card-subtitle">JK Innovative Private Limited</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Amravati, India</p>
+                        <p class="card-duration">Dec 2024 - Mar 2025</p>
+                        <ul class="card-details">
+                            <li>Part of project development team working with Java</li>
+                            <li>Developed FASTag Registration & Generator Portal</li>
+                            <li>Implemented toll automation and payment processing</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Experience 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Feb 2025 - Jul 2025</div>
-                    <div class="timeline-content">
-                        <h3>Full-Stack Developer Intern</h3>
-                        <h4>Codec Technologies</h4>
-                        <p class="institution">Remote</p>
-                        <ul class="log-details">
-                            <li>> Developed JobTrackr, an AI-Based Job Recommendation Platform</li>
-                            <li>> Integrated ML algorithms for skill-based job recommendations</li>
-                            <li>> Built backend using Java (JSP/Servlets) and MySQL</li>
+
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon education">
+                            <i data-lucide="school"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Higher Secondary Certificate</h4>
+                            <p class="card-subtitle">HSC (12th)</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Bhartiya Mahavidyalaya, Amravati</p>
+                        <p class="card-duration">2023</p>
+                        <ul class="card-details">
+                            <li>Stream: Science</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon experience">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Java Developer Intern</h4>
+                            <p class="card-subtitle">3SV Software Solution</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Remote</p>
+                        <p class="card-duration">Mar 2025 - Apr 2025</p>
+                        <ul class="card-details">
+                            <li>Worked on ID Verification System</li>
+                            <li>Implemented unique ID generation and validation</li>
+                            <li>Focused on secure data handling</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon experience">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Web Content Development Intern</h4>
+                            <p class="card-subtitle">Dotcom Infotech Pvt. Ltd.</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Amravati, India</p>
+                        <p class="card-duration">Feb 2025</p>
+                        <ul class="card-details">
+                            <li>Completed 60-hour internship focused on Web Content Development</li>
+                            <li>Worked on field project involving web technology implementation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="background-card">
+                    <div class="card-header">
+                        <div class="card-icon education">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <div class="card-title-group">
+                            <h4>Secondary School Certificate</h4>
+                            <p class="card-subtitle">SSC (10th)</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-institution">Shri Saibaba Vidyalaya, Amravati</p>
+                        <p class="card-duration">2021</p>
                     </div>
                 </div>
             </div>
@@ -228,59 +418,194 @@
                 <h2><span class="hash">#</span> SYSTEM_STACK</h2>
                 <div class="line"></div>
             </div>
-            <div class="skills-container">
+            <div class="skills-grid">
                 <!-- Programming Languages -->
-                <div class="skill-category" id="programming-skills">
-                    <h3>Programming.lang</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><i data-lucide="code-2"></i> Python</div>
-                        <div class="skill-item"><i data-lucide="coffee"></i> Java</div>
-                        <div class="skill-item"><i data-lucide="file-code"></i> JavaScript</div>
-                        <div class="skill-item"><i data-lucide="code"></i> C</div>
-                        <div class="skill-item"><i data-lucide="file-code"></i> PHP</div>
+                <div class="skill-card">
+                    <h3 class="skill-card-title gradient-text">Programming Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="70"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="connector-line"></div>
-
-                <!-- Frontend Cluster -->
-                <div class="skill-category" id="frontend-skills">
-                    <h3>Frontend.exe</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><i data-lucide="layout"></i> HTML5</div>
-                        <div class="skill-item"><i data-lucide="palette"></i> CSS3</div>
-                        <div class="skill-item"><i data-lucide="zap"></i> Bootstrap 5</div>
-                        <div class="skill-item"><i data-lucide="smartphone"></i> React Native</div>
-                        <div class="skill-item"><i data-lucide="code-2"></i> Node.js</div>
+                <!-- Frontend Technologies -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title gradient-text">Frontend Technologies</h3>
+                    <div class="skill-list">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 & CSS3</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap 5</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React Native</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="connector-line"></div>
-
-                <!-- Backend Cluster -->
-                <div class="skill-category" id="backend-skills">
-                    <h3>Backend.sh</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><i data-lucide="database"></i> Supabase</div>
-                        <div class="skill-item"><i data-lucide="database"></i> PostgreSQL</div>
-                        <div class="skill-item"><i data-lucide="database"></i> MySQL</div>
-                        <div class="skill-item"><i data-lucide="server"></i> JDBC/Servlets</div>
+                <!-- Backend & Databases -->
+                <div class="skill-card">
+                    <h3 class="skill-card-title gradient-text">Backend & Databases</h3>
+                    <div class="skill-list">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Supabase</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JDBC/Servlets</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="connector-line"></div>
 
                 <!-- Tools & AI/ML -->
-                <div class="skill-category" id="tools-skills">
-                    <h3>Tools & AI.pkg</h3>
-                    <div class="skill-grid">
-                        <div class="skill-item"><i data-lucide="github"></i> GitHub</div>
-                        <div class="skill-item"><i data-lucide="code"></i> VS Code</div>
-                        <div class="skill-item"><i data-lucide="bar-chart"></i> Tableau</div>
-                        <div class="skill-item"><i data-lucide="pie-chart"></i> Power BI</div>
-                        <div class="skill-item"><i data-lucide="brain"></i> Pandas</div>
-                        <div class="skill-item"><i data-lucide="cpu"></i> NumPy</div>
-                        <div class="skill-item"><i data-lucide="sparkles"></i> Machine Learning</div>
+                <div class="skill-card">
+                    <h3 class="skill-card-title gradient-text">Tools & AI/ML</h3>
+                    <div class="skill-list">
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GitHub</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">VS Code</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Tableau & Power BI</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Pandas & NumPy</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Machine Learning</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="skill-progress-fill" data-progress="75"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -289,14 +614,15 @@
         <!-- Projects Section (Modules) -->
         <section id="projects">
             <div class="section-header">
-                <h2><span class="hash">#</span> DEPLOYED_MODULES</h2>
+                <h2><span class="hash">#</span> PROJECTS</h2>
                 <div class="line"></div>
             </div>
-            <div class="projects-grid">
+            <div class="projects-modern-grid">
                 <!-- Project 1: PlaceWise -->
                 <div class="project-card">
                     <div class="card-face card-front">
-                        <div class="project-image"></div>
+                        <div class="project-image" style="background: url('assets/images/placewise.png') center/cover;">
+                        </div>
                         <div class="project-info">
                             <h3>PlaceWise</h3>
                             <p>AI-Driven Training & Placement Platform with automated communication and RLS security.
@@ -326,6 +652,8 @@
                         <div class="project-links">
                             <a href="https://github.com/ArpitBavankule1" class="link-btn">GitHub <i
                                     data-lucide="github"></i></a>
+                            <a href="https://www.firstplacewise.tech/" target="_blank" class="link-btn">Live Demo <i
+                                    data-lucide="external-link"></i></a>
                         </div>
                     </div>
                 </div>
@@ -333,7 +661,8 @@
                 <!-- Project 2: JobTrackr -->
                 <div class="project-card">
                     <div class="card-face card-front">
-                        <div class="project-image" style="background: linear-gradient(45deg, #1a1a1a, #2d2d2d);"></div>
+                        <div class="project-image" style="background: url('assets/images/jobtrackr.png') center/cover;">
+                        </div>
                         <div class="project-info">
                             <h3>JobTrackr</h3>
                             <p>AI-Based Job Recommendation Platform using ML algorithms for skill matching.</p>
@@ -368,7 +697,8 @@
                 <!-- Project 3: FASTag System -->
                 <div class="project-card">
                     <div class="card-face card-front">
-                        <div class="project-image" style="background: linear-gradient(45deg, #1e3a8a, #3b82f6);"></div>
+                        <div class="project-image" style="background: url('assets/images/fastag.png') center/cover;">
+                        </div>
                         <div class="project-info">
                             <h3>FASTag Card System</h3>
                             <p>Toll automation system with wallet management and transaction tracking.</p>
@@ -405,7 +735,8 @@
                 <!-- Project 4: ID Verification System -->
                 <div class="project-card">
                     <div class="card-face card-front">
-                        <div class="project-image" style="background: linear-gradient(45deg, #065f46, #10b981);"></div>
+                        <div class="project-image"
+                            style="background: url('assets/images/id_verification.png') center/cover;"></div>
                         <div class="project-info">
                             <h3>Secure ID Verification</h3>
                             <p>Identity management solution with unique ID generation and validation.</p>
@@ -441,61 +772,77 @@
             </div>
         </section>
 
-        <!-- Contact Section (Signal) -->
+        <!-- Contact Section -->
         <section id="contact">
             <div class="section-header">
-                <h2><span class="hash">#</span> INIT_SIGNAL</h2>
+                <h2><span class="hash">#</span> Get In Touch</h2>
                 <div class="line"></div>
             </div>
-            <div class="contact-grid">
-                <!-- Left Side: Contact Info -->
-                <div class="contact-info">
-                    <h3>// TRANSMISSION_CHANNELS</h3>
-                    <p class="contact-desc">Ready to collaborate on high-velocity projects. Initialize connection below.
+            <div class="contact-container">
+                <div class="contact-intro">
+                    <h3 class="contact-title">Let's Work Together</h3>
+                    <p class="contact-description">
+                        I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision.
+                        Feel free to reach out through the form below or connect with me on social media.
                     </p>
-
-                    <div class="info-item">
-                        <i data-lucide="mail"></i>
-                        <div>
-                            <h4>EMAIL_ID</h4>
-                            <p>arpitbavankule03@gmail.com</p>
+                    <div class="contact-info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Email</h4>
+                                <a href="mailto:arpitbavankule03@gmail.com">arpitbavankule03@gmail.com</a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i data-lucide="map-pin"></i>
-                        <div>
-                            <h4>BASE_LOC</h4>
-                            <p>Gopal Nagar, Amravati, 444607</p>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Location</h4>
+                                <p>Amravati, Maharashtra, India</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="info-item">
-                        <i data-lucide="linkedin"></i>
-                        <div>
-                            <h4>NET_LINK</h4>
-                            <p><a href="https://linkedin.com/in/arpitbavankule03" target="_blank"
-                                    style="color: inherit;">linkedin.com/in/arpitbavankule03</a></p>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/arpitbavankule03"
+                                    target="_blank">linkedin.com/in/arpitbavankule03</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Side: Form -->
-                <div class="contact-form-wrapper">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">ID_NAME</label>
-                            <input type="text" id="name" required placeholder="John Doe">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="modern-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required placeholder="Your name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required placeholder="your.email@example.com">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">COMM_CHANNEL</label>
-                            <input type="email" id="email" required placeholder="fcorp@net.com">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="What's this about?">
                         </div>
                         <div class="form-group">
-                            <label for="message">PAYLOAD</label>
-                            <textarea id="message" rows="5" required placeholder="Transmission content..."></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="6" required placeholder="Your message here..."></textarea>
                         </div>
-                        <button type="submit" class="btn primary">SEND_TRANSMISSION</button>
+                        <button type="submit" class="btn primary">
+                            <i data-lucide="send"></i>
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -504,11 +851,13 @@
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2026 ARPIT BAVANKULE. ALL SYSTEMS OPERATIONAL.</p>
-            <div class="socials">
-                <a href="https://github.com/ArpitBavankule1" target="_blank"><i data-lucide="github"></i></a>
-                <a href="https://linkedin.com/in/arpitbavankule03" target="_blank"><i data-lucide="linkedin"></i></a>
-                <a href="mailto:arpitbavankule03@gmail.com"><i data-lucide="mail"></i></a>
+            <p>© 2026 Arpit Bavankule. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/ArpitBavankule1" target="_blank" aria-label="GitHub"><i
+                        data-lucide="github"></i></a>
+                <a href="https://linkedin.com/in/arpitbavankule03" target="_blank" aria-label="LinkedIn"><i
+                        data-lucide="linkedin"></i></a>
+                <a href="mailto:arpitbavankule03@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
             </div>
         </div>
     </footer>

@@ -1,3 +1,75 @@
+// Page Loader
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+        // Remove from DOM after animation completes
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }, 800); // Show loader for at least 800ms
+});
+
+// Typewriter Effect for Hero Section
+const typewriterElement = document.getElementById('typewriter');
+if (typewriterElement) {
+    const roles = ['Full-Stack Developer', 'AI Enthusiast', 'BCA Student', 'Problem Solver'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 150;
+
+    function typeWriter() {
+        const currentRole = roles[roleIndex];
+
+        if (isDeleting) {
+            typewriterElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 75;
+        } else {
+            typewriterElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 150;
+        }
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            isDeleting = true;
+            typingSpeed = 2000; // Pause at end
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typingSpeed = 500; // Pause before next word
+        }
+
+        setTimeout(typeWriter, typingSpeed);
+    }
+
+    typeWriter();
+}
+
+// Scroll Reveal Animation
+const revealElements = document.querySelectorAll('.section-header, .stat-card, .project-card, .timeline-item, .skill-card, .info-item');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+revealElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    revealObserver.observe(el);
+});
+
+
 // Custom Cursor
 const cursorDot = document.getElementById('cursor-dot');
 const cursorOutline = document.getElementById('cursor-outline');
@@ -51,6 +123,59 @@ projectCards.forEach(card => {
         e.stopPropagation();
         card.classList.remove('flipped');
     });
+});
+
+// Skill Progress Bar Animation
+const skillProgressBars = document.querySelectorAll('.skill-progress-fill');
+
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const progressBar = entry.target;
+            const progress = progressBar.getAttribute('data-progress');
+            progressBar.style.width = progress + '%';
+            skillObserver.unobserve(progressBar);
+        }
+    });
+}, { threshold: 0.5 });
+
+skillProgressBars.forEach(bar => {
+    skillObserver.observe(bar);
+});
+
+// Statistics Counter Animation
+const statNumbers = document.querySelectorAll('.stat-number');
+
+const animateCounter = (element) => {
+    const target = parseInt(element.getAttribute('data-target'));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60fps
+    let current = 0;
+
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target;
+        }
+    };
+
+    updateCounter();
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+statNumbers.forEach(stat => {
+    statsObserver.observe(stat);
 });
 
 // Terminal Typing Effect
@@ -137,6 +262,7 @@ document.querySelectorAll('.nav-links a').forEach(item => {
 // Scroll Active Link Spy
 const sections = document.querySelectorAll('section');
 const navLi = document.querySelectorAll('.nav-links li a');
+const mobileNavLi = document.querySelectorAll('.mobile-nav-links a');
 
 window.addEventListener('scroll', () => {
     let current = '';
@@ -148,13 +274,55 @@ window.addEventListener('scroll', () => {
         }
     });
 
+    // Update desktop nav
     navLi.forEach(a => {
         a.classList.remove('active');
         if (a.getAttribute('href').includes(current)) {
             a.classList.add('active');
         }
     });
+
+    // Update mobile nav
+    mobileNavLi.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href').includes(current)) {
+            a.classList.add('active');
+        }
+    });
 });
+
+
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        mobileMenuToggle.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu when clicking on a link
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    // Close mobile menu when clicking outside
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
 
 
 // Theme Toggle Functionality
@@ -189,3 +357,20 @@ themeToggle.addEventListener('click', () => {
         updateThemeIcon('theme-dark');
     }
 });
+
+// Contact Form Mailto Fallback
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+        window.location.href = `mailto:arpitbavankule03@gmail.com?subject=${subject}&body=${body}`;
+    });
+}
