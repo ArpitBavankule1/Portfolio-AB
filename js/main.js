@@ -358,6 +358,7 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
+
 // Contact Form Mailto Fallback
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
